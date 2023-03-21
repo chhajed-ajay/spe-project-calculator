@@ -10,7 +10,7 @@
       register: result
 
     - name: remove container if exists
-      shell: docker rm calc_container
+      shell: /usr/local/bin/docker rm calc_container
       when: result.exists
 
     - name: running container
