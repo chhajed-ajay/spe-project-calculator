@@ -2,10 +2,10 @@
   hosts: all
   tasks:
     - name: pull docker image
-      shell: docker pull chhajed7890/scientific_calculator
+      shell: /usr/local/bin/docker pull chhajed7890/scientific_calculator
 
     - name: running container
-      shell: docker run -it -d -p 6000:6000 chhajed7890/scientific_calculator
+      shell: /usr/local/bin/docker run -it -d -p 6000:6000 chhajed7890/scientific_calculator
 
 
 
