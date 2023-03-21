@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  backend:
+    image: chhajed7890/scientific_calculator:latest
+    ports:
+      - "6000:6000"
+    restart: always
+
