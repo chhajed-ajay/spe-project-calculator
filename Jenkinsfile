@@ -54,13 +54,14 @@ pipeline{
         stage('Containerize (Push to Dockerhub and pull from Dockerhub)') {
             steps {
                 // sh "export PATH=$PATH:/usr/local/bin/docker"
-                sh "/usr/local/bin/docker build -t scientific_calculator ."
+
+                sh "/usr/local/bin/docker build -t chhajed7890/scientific_calculator ."
                 withCredentials([usernamePassword(credentialsId: 'docker_HUb', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh '/usr/local/bin/docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    sh '/usr/local/bin/docker tag scientific_calculator chhajed7890/scientific_calculator:latest'
-                    sh '/usr/local/bin/docker push chhajed7890/scientific_calculator:latest'
+//                     sh '/usr/local/bin/docker tag scientific_calculator chhajed7890/scientific_calculator:latest'
+                    sh '/usr/local/bin/docker push chhajed7890/scientific_calculator'
                 }
-                sh '/usr/local/bin/docker pull chhajed7890/scientific_calculator:latest'
+                sh '/usr/local/bin/docker pull chhajed7890/scientific_calculator'
 
             }
         }
