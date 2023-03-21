@@ -33,8 +33,6 @@ pipeline{
                 // sh 'docker build -t calculator .'
                 sh "mvn clean package"
                 // def jarFilePath = sh(returnStdout: true, script: 'find $WORKSPACE -name "*.jar"').trim()
-
-
         }
             }
 

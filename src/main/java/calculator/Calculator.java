@@ -13,8 +13,9 @@ public class Calculator {
 
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
-        int x;
-        double numm;
+        int x = 1;
+        double numm = 1;
+        System.out.print("Default : 1.\n");
         do {
             System.out.println("You are using Scientific Calculator. Choose the corresponding number for a function you want to use and enjoy!!");
             System.out.print("Enter 1 for getFactorial.\n");
@@ -22,33 +23,34 @@ public class Calculator {
             System.out.print("Enter 3 for XpowerY function.\n");
             System.out.print("Enter 4 for logarithmic function.\n");
             System.out.print("Enter 5 to exit.\n");
-            int function;
+            int choice;
 
             // handling the input mismatch error
             try {
-                function = scanner.nextInt();
+                System.out.print("input dedo\n");
+                choice = scanner.nextInt();
             } catch (InputMismatchException error) {
                 return;
             }
 
-            if(function == 1){
+            if(choice == 1){
                 System.out.print("Write number for which you want to find a getFactorial : ");
                 x = scanner.nextInt();
                 System.out.println("Factorial: " + calculator.getFactorial(x) + "\n");
             }
-            else if(function == 2){
+            else if(choice == 2){
                 System.out.print("Write a number to find sqaure root for : ");
                 x = scanner.nextInt();
                 System.out.println("Square root:" +  calculator.getSquareRoot(x) + "\n");
             }
-            else if(function == 3){
+            else if(choice == 3){
                 System.out.print("Base: ");
                 numm = scanner.nextDouble();
                 System.out.print("Power: ");
                 double numm2 = scanner.nextDouble();
                 System.out.println(numm+ "^"+numm2+ ": " + calculator.XpowerY(numm, numm2) + "\n");
             }
-            else if(function == 4){
+            else if(choice == 4){
                 System.out.print("Write a number to find natural log for : ");
                 numm = scanner.nextDouble();
                 System.out.println("Natural log:  "+numm+" is : " + calculator.getNaturalLog(numm));
