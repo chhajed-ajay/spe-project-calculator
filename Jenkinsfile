@@ -6,7 +6,8 @@ pipeline{
 //     }
 
     environment{
-        PATH = "/usr/local/Cellar/maven/3.9.0/libexec:${PATH}"
+//         PATH = "/usr/local/Cellar/maven/3.9.0/libexec:${PATH}"
+        PATH = "/opt/homebrew/bin:$PATH"
         DOCKER_IMAGE = 'chhajed7890/scientific_calculator:latest'
         CONTAINER_NAME = 'scientific_calculator'
         PORTS = '8080:80'
@@ -17,8 +18,8 @@ pipeline{
     stages{
         stage('Clone Git'){
             steps{
-//                 git 'https://github.com/chhajed-ajay/spe-project-calculator.git'
-                   checkout scm
+                git 'https://github.com/chhajed-ajay/spe-project-calculator.git'
+//                    checkout scm
             }
         }
 

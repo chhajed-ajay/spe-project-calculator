@@ -27,7 +27,6 @@ public class Calculator {
 
             // handling the input mismatch error
             try {
-                System.out.print("input dedo\n");
                 choice = scanner.nextInt();
             } catch (InputMismatchException error) {
                 return;
