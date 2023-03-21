@@ -18,8 +18,8 @@ pipeline{
     stages{
         stage('Clone Git'){
             steps{
-                git 'https://github.com/chhajed-ajay/spe-project-calculator.git'
-//                    checkout scm
+//                 git 'https://github.com/chhajed-ajay/spe-project-calculator.git'
+                   checkout scm
             }
         }
 
