@@ -4,8 +4,17 @@
     - name: pull docker image
       shell: /usr/local/bin/docker pull chhajed7890/scientific_calculator
 
+    - name: get container info
+      docker_container_info:
+          name: calc_container
+      register: result
+
+    - name: remove container if exists
+      shell: docker rm calc_container
+      when: result.exists
+
     - name: running container
-      shell: /usr/local/bin/docker run -it -d -p 6000:6000 chhajed7890/scientific_calculator
+      shell: /usr/local/bin/docker run -it -d --name calc_container -p 6000:6000 chhajed7890/scientific_calculator
 
 
 
