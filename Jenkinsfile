@@ -61,7 +61,7 @@ pipeline{
 //                     sh '/usr/local/bin/docker tag scientific_calculator chhajed7890/scientific_calculator:latest'
                     sh '/usr/local/bin/docker push chhajed7890/scientific_calculator'
                 }
-                sh '/usr/local/bin/docker pull chhajed7890/scientific_calculator'
+//                 sh '/usr/local/bin/docker pull chhajed7890/scientific_calculator'
 
             }
         }
