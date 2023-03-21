@@ -40,7 +40,7 @@ pipeline{
 
         stage('Test'){
             steps{
-                 dir('/Users/ajaychhajed/Desktop/spe-mini-project-calculator/spe-mini-project_calculator/src/test') {
+                 dir('/Users/ajaychhajed/Desktop/spe-mini-project-calculator/spe-mini-project_calculator') {
                     /* execute commands in the scripts directory */
                     // sh "javac CalculatorTest.java"
                     // sh "java CalculatorTest"
