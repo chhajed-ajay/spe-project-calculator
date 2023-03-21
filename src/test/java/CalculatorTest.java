@@ -8,6 +8,7 @@ class CalculatorTest {
     private static final double DELTA = 1e-6;
     @org.junit.jupiter.api.Test
     void getFactorial() {
+        assertEquals( 2, calculator.getFactorial(2), DELTA);
         assertEquals( 120, calculator.getFactorial(5), DELTA);
         assertEquals( 1, calculator.getFactorial(1), DELTA);
         assertEquals( 24, calculator.getFactorial(4), DELTA);
