@@ -6,13 +6,10 @@ pipeline{
 //     }
 
     environment{
-//         PATH = "/usr/local/Cellar/maven/3.9.0/libexec:${PATH}"
         PATH = "/opt/homebrew/bin:$PATH"
         DOCKER_IMAGE = 'chhajed7890/scientific_calculator:latest'
         CONTAINER_NAME = 'scientific_calculator'
         PORTS = '8080:80'
-        // PATH = "/usr/local/bin/docker:${PATH}"
-        // DOCKER_HOST = 'tcp://localhost:2375'
     }
 
     stages{
@@ -25,14 +22,6 @@ pipeline{
 
         stage('Build'){
             steps {
-                // dir('/Users/chiragbansal/Desktop/Test') {
-                //     /* execute commands in the scripts directory */
-                //     sh "javac src/Calculator.java"
-                //     sh "java src/Calculator"
-                // }
-                // Maven build, 'sh' specifies it is a shell command
-                // sh 'mvn clean install'
-                // sh 'docker build -t calculator .'
                 sh "mvn clean package"
                 // def jarFilePath = sh(returnStdout: true, script: 'find $WORKSPACE -name "*.jar"').trim()
         }
