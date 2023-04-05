@@ -2,10 +2,13 @@ package calculator ;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator {
 
     // default constructor
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public Calculator() {
     }
 
@@ -35,10 +38,11 @@ public class Calculator {
             if(choice == 1){
                 System.out.print("Write number for which you want to find a getFactorial : ");
                 x = scanner.nextInt();
+                logger.info("Factorial of - " + x + " is - " + calculator.getFactorial(x));
                 System.out.println("Factorial: " + calculator.getFactorial(x) + "\n");
             }
             else if(choice == 2){
-                System.out.print("Write a number to find sqaure root for : ");
+                System.out.print("Write a number to find square root for : ");
                 x = scanner.nextInt();
                 System.out.println("Square root:" +  calculator.getSquareRoot(x) + "\n");
             }
@@ -65,13 +69,24 @@ public class Calculator {
 
 
     public double getFactorial(int x) {
+        if(x < 0) {
+            logger.error("Error - Negative Number");
+            return -1;
+        }
+
         if (x == 1 || x == 0)
             return 1;
+
         return getFactorial(x - 1) * x;
     }
 
     public double getSquareRoot(int n ) {
-        return Math.sqrt(n);
+        if (n < 0)
+            logger.error("Error - Negative Number");
+
+        double ans = Math.sqrt(n);
+        logger.info("SquareRoot of - " + n + " is - " + ans);
+        return ans;
     }
 
 
@@ -82,19 +97,23 @@ public class Calculator {
         try {
             if (numm <= 0 ) {
                 answer = Double.NaN;
+                logger.error("Error - Negative Number");
                 // throw new ArithmeticException("Cannot find natural log of negative numbers (<=0)");
             }
             else {
                 answer = Math.log(numm);
             }
         } catch (ArithmeticException error) {
+            logger.error("Error - Negative Number");
             System.out.println("Cannot find natural log of negative numbers (<=0)" + error.getLocalizedMessage());
         }
+        logger.info("Natural log of - " + numm + " is - " + answer);
         return answer;
     }
 
     public double XpowerY(double numm, double number2) {
         double answer = Math.pow(numm,number2);
+        logger.info(numm + "to the power of " + number2 + "is - " + answer);
         return answer;
     }
 
