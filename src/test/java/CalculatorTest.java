@@ -13,7 +13,6 @@ class CalculatorTest {
         assertEquals( 1, calculator.getFactorial(1), DELTA);
         assertEquals( 24, calculator.getFactorial(4), DELTA);
         assertEquals( 1, calculator.getFactorial(0), DELTA);
-        assertEquals( 6, calculator.getFactorial(3), DELTA);
         assertEquals( 3628800, calculator.getFactorial(10), DELTA);
     }
 

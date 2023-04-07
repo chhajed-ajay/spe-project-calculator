@@ -66,3 +66,16 @@
 05/04/2023:18:13:16 672 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 16 is - 4.0
 05/04/2023:18:13:16 672 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 256 is - 16.0
 05/04/2023:18:13:16 672 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 1 is - 1.0
+08/04/2023:00:42:27 756 [Calculator.java] [INFO] calculator.Calculator 2.0to the power of 3.0is - 8.0
+08/04/2023:00:42:27 759 [Calculator.java] [INFO] calculator.Calculator 5.0to the power of 4.0is - 625.0
+08/04/2023:00:42:27 760 [Calculator.java] [INFO] calculator.Calculator 10392.0to the power of 0.0is - 1.0
+08/04/2023:00:42:27 760 [Calculator.java] [INFO] calculator.Calculator 2.0to the power of 4.0is - 16.0
+08/04/2023:00:42:27 760 [Calculator.java] [INFO] calculator.Calculator 4.0to the power of 3.0is - 64.0
+08/04/2023:00:42:27 764 [Calculator.java] [INFO] calculator.Calculator Natural log of - 9.0 is - 2.1972245773362196
+08/04/2023:00:42:27 765 [Calculator.java] [INFO] calculator.Calculator Natural log of - 1.0 is - 0.0
+08/04/2023:00:42:27 765 [Calculator.java] [INFO] calculator.Calculator Natural log of - 15.0 is - 2.70805020110221
+08/04/2023:00:42:27 766 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 9 is - 3.0
+08/04/2023:00:42:27 767 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 100 is - 10.0
+08/04/2023:00:42:27 767 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 16 is - 4.0
+08/04/2023:00:42:27 767 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 256 is - 16.0
+08/04/2023:00:42:27 767 [Calculator.java] [INFO] calculator.Calculator SquareRoot of - 1 is - 1.0
